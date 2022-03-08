@@ -1,16 +1,24 @@
 import "./NavBar.scss";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
-
   return (
     <div className="nav-container">
       <div className="nav-items">
-        <div className="nav-item">Home</div>
-        <div className="nav-item">Projects</div>
-        <div className="nav-item">Blog</div>
-        <div className="nav-item">About</div>
+        <Link to="/home" className="nav-item">
+          Home
+        </Link>
+        <Link to="/projects" className="nav-item">
+          Projects
+        </Link>
+        <Link to="/blog" className="nav-item">
+          Blog
+        </Link>
+        <Link to="/about" className="nav-item">
+          About
+        </Link>
       </div>
-     </div>
+    </div>
   );
 };
 

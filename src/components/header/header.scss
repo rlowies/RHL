@@ -1,5 +1,7 @@
+@import "../../variables.scss";
+
 .header-container {
-    background-color: #395763;
+    background-color: $header-color;
     color: white;
     padding: 6vh 6vw;
 }

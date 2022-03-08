@@ -1,5 +1,7 @@
+@import "../../variables.scss";
+
 .blog-page-container {
-    background-color: #6a3939;
+    background-color: $page-color;
     position: absolute;
     height: 100%;
     width: 100%;

@@ -1,7 +1,10 @@
+@import "../../variables.scss";
+
 .footer-container {
     position: fixed;
     bottom: 0;
-    background-color: #394563;
+    background-color: $footer-color;
     width: 100%;
-    padding: 1vh 1vw;
+    padding: 0 1vw;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
 }

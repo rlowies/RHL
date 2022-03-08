@@ -7,6 +7,7 @@ import HomePage from "./pages/homePage/HomePage";
 import ProjectsPage from "./pages/projectsPage/ProjectsPage";
 import BlogPage from "./pages/blogPage/BlogPage";
 import AboutPage from "./pages/aboutPage/AboutPage";
+import { ROUTE_PATHS } from "./constants/routes";
 
 function App() {
   return (
@@ -15,11 +16,11 @@ function App() {
         <Header />
         <NavBar />
         <Routes>
-          <Route path="/" element={<Navigate replace to="/home" />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/" element={<Navigate replace to={ROUTE_PATHS.home} />} />
+          <Route path={ROUTE_PATHS.home} element={<HomePage />} />
+          <Route path={ROUTE_PATHS.projects} element={<ProjectsPage />} />
+          <Route path={ROUTE_PATHS.blog} element={<BlogPage />} />
+          <Route path={ROUTE_PATHS.about} element={<AboutPage />} />
         </Routes>
         <Footer />
       </div>

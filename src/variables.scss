@@ -1,0 +1,24 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+/* COLORS */
+$active-tab-color: #006c9a;
+$inactive-tab-color: #2e5768;
+$page-color: #4979cb;
+$header-color: #395763;
+$footer-color: #394563;
+$nav-bg: #2e4d4d;
+
+/* ANIMATIONS */
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateX(50%) scale(0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }

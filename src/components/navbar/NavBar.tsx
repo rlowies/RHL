@@ -1,22 +1,17 @@
 import "./NavBar.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { routes } from "../../constants/routes";
 
 const NavBar = () => {
+  const { pathname: currentRoute } = useLocation();
   return (
     <div className="nav-container">
       <div className="nav-items">
-        <Link to="/home" className="nav-item">
-          Home
-        </Link>
-        <Link to="/projects" className="nav-item">
-          Projects
-        </Link>
-        <Link to="/blog" className="nav-item">
-          Blog
-        </Link>
-        <Link to="/about" className="nav-item">
-          About
-        </Link>
+        {routes.map(({ route, name }) => (
+          <Link to={route} className={`nav-item ${currentRoute === route ? "nav-item-active" : ""}`}>
+            {name}
+          </Link>
+        ))}
       </div>
     </div>
   );

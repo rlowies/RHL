@@ -1,5 +1,7 @@
+@import "../../variables.scss";
+
 .nav-container {
-  background-color: rgb(117, 180, 181);
+  background-color: $nav-bg;
   width: 100%;
 
   a {
@@ -14,12 +16,16 @@
 }
 
 .nav-item {
-  background-color: #2e5768;
-  animation: 400ms linear both fade-in;
-  margin-right: 0.25vw;
+  background-color: $inactive-tab-color;
+  animation: 300ms ease-in both fade-in;
+  margin: 0 auto;
   padding: 1vh 4vw;
   display: flex;
   justify-content: center;
+
+  &-active {
+    background-color: $active-tab-color;
+  }
 }
 
 @for $i from 1 through 4 {
@@ -27,17 +33,5 @@
     &:nth-child(#{$i}) {
       animation-delay: $i * (30ms);
     }
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateX(50%) scale(0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0) scale(1);
   }
 }

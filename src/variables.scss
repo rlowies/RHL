@@ -11,10 +11,10 @@ $footer-color: #394563;
 $nav-bg: #2e4d4d;
 
 /* ANIMATIONS */
-@keyframes fade-in {
+@keyframes fade-in-left {
     0% {
       opacity: 0;
-      transform: translateX(50%) scale(0);
+      transform: translateX(100%) scale(0);
     }
   
     100% {

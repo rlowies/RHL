@@ -1,5 +1,5 @@
 import Header from "../../components/header/Header";
-// import Menu from "../../components/menu/Menu";
+import NavBar from "../../components/navbar/NavBar";
 import "./HomePage.scss";
 
 const HomePage = () => {
@@ -7,8 +7,7 @@ const HomePage = () => {
     <>
       <Header />
       <div className="home-page-container">
-        Home
-        {/* <Menu /> */}
+        <NavBar />
       </div>
     </>
   );

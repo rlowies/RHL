@@ -7,8 +7,8 @@ const NavBar = () => {
   return (
     <div className="nav-container">
       <div className="nav-items">
-        {routes.map(({ route, name }) => (
-          <Link to={route} className={`nav-item ${currentRoute === route ? "nav-item-active" : ""}`}>
+        {routes.map(({ route, name }, i) => (
+          <Link key={i} to={route} className={`nav-item ${currentRoute === route ? "nav-item-active" : ""}`}>
             {name}
           </Link>
         ))}

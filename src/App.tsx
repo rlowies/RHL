@@ -3,10 +3,10 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import NavBar from "./components/navbar/NavBar";
 import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
-import Home from "./pages/home/Home";
-import ProjectsPage from "./pages/projectsPage/ProjectsPage";
-import BlogPage from "./pages/blogPage/BlogPage";
-import AboutPage from "./pages/aboutPage/AboutPage";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Blog from "./pages/Blog";
+import About from "./pages/About";
 import { ROUTE_PATHS } from "./constants/routes";
 
 function App() {
@@ -18,9 +18,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate replace to={ROUTE_PATHS.home} />} />
           <Route path={ROUTE_PATHS.home} element={<Home />} />
-          <Route path={ROUTE_PATHS.projects} element={<ProjectsPage />} />
-          <Route path={ROUTE_PATHS.blog} element={<BlogPage />} />
-          <Route path={ROUTE_PATHS.about} element={<AboutPage />} />
+          <Route path={ROUTE_PATHS.projects} element={<Projects />} />
+          <Route path={ROUTE_PATHS.blog} element={<Blog />} />
+          <Route path={ROUTE_PATHS.about} element={<About />} />
         </Routes>
         <Footer />
       </div>
